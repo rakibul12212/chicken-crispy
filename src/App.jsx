@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -22,7 +23,7 @@ const App = () => {
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
-    setSidebarOpen(true);
+    setSidebarOpen(true); // Open sidebar when an item is added
   };
 
   const updateQuantity = (id, increment) => {
@@ -49,23 +50,24 @@ const App = () => {
   );
 
   return (
-    <div >
+    <div className="flex">
       <div className={`relative flex ${isSidebarOpen ? "w-4/5" : "w-full"}`}>
         <div className="flex-1">
-          <Navbar cartCount={cartCount} />
+          <Navbar 
+            cartCount={cartCount} 
+            openSidebar={() => setSidebarOpen(true)} // Pass the function to open sidebar
+          />
           <Hero addToCart={addToCart} />
         </div>
-        {isSidebarOpen && (
-          <Sidebar
-            cartItems={cartItems}
-            totalPrice={totalPrice}
-            updateQuantity={updateQuantity}
-            isSidebarOpen={isSidebarOpen}
-            closeSidebar={closeSidebar}
-            removeItem={removeItem}
-            className="w-1/5"
-          />
-        )}
+        <Sidebar
+          cartItems={cartItems}
+          totalPrice={totalPrice}
+          updateQuantity={updateQuantity}
+          isSidebarOpen={isSidebarOpen}
+          closeSidebar={closeSidebar}
+          removeItem={removeItem}
+          className="w-1/5"
+        />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+// Sidebar.js
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { ImBin2 } from "react-icons/im";
@@ -52,14 +53,13 @@ const Sidebar = ({
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-20  object-cover rounded-md"
+                    className="w-16 h-20 object-cover rounded-md"
                   />
                   <div className="ml-4">
                     <p className="font-semibold text-base text-white">
                       {item.name}
                     </p>
                     <p className="text-xs text-white">${item.price}/each</p>
-
                     <div className="flex items-center mt-2">
                       <button
                         onClick={() => updateQuantity(item.id, -1)}
