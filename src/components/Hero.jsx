@@ -100,14 +100,14 @@ const Hero = ({ addToCart }) => {
           </div>
         </div>
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {products.map((product) => (
             <div
               key={product.id}
               className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center gap-2 relative max-w-md" // Change this line
             >
               {product.new && (
-                <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs px-3 py-1 rounded-full transform -rotate-45">
+                <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs font-semibold italic px-3 py-1 rounded-br-lg rounded-tl-lg transform -rotate-45">
                   NEW
                 </span>
               )}
