@@ -100,11 +100,11 @@ const Hero = ({ addToCart }) => {
           </div>
         </div>
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white  p-5 rounded-lg shadow-md flex flex-col items-center relative"
+              className="bg-white  p-5 rounded-lg shadow-md flex flex-col items-center  gap-2 relative"
             >
               {product.new && (
                 <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs px-3 py-1 rounded-full transform -rotate-45">
@@ -115,24 +115,23 @@ const Hero = ({ addToCart }) => {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-40 object-cover mb-4 rounded-md"
+                className="w-full h-36 object-cover mb-2 rounded-md"
               />
               <div className="text-start">
-                <p className=" text-lg font-bold">{product.name}</p>
-                <p className="text-gray-600 pb-4">{product.price}$/foreach</p>
-                <p className="text-gray-600 text-sm ">{product.description}</p>
+                <p className=" text-lg font-semibold">{product.name}</p>
+                <p className="text-gray-600 pb-2">{product.price}$/foreach</p>
+                <p className="text-gray-600 text-sm line-clamp-2 overflow-hidden">
+                  {product.description}
+                </p>
               </div>
 
               <button
                 onClick={() => addToCart(product)}
-                className="mt-4 w-full bg-red-500 text-white font-medium hover:text-white hover:bg-gray-500 py-2 rounded"
+                className="mt-4 w-full bg-red-500 text-white font-medium hover:text-white hover:bg-gray-500 py-1 rounded"
               >
                 Add to Order
               </button>
-              <button
-                onClick={() => addToCart(product)}
-                className="mt-4 w-full bg-white text-red-500 border-2 border-red-500 py-2 rounded font-medium"
-              >
+              <button className="mt-2 w-full bg-white text-red-500 border-2 border-red-500 py-1 rounded font-medium">
                 Customize
               </button>
             </div>
