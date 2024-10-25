@@ -49,7 +49,7 @@ const App = () => {
   );
 
   return (
-    <div>
+    <div >
       <div className={`relative flex ${isSidebarOpen ? "w-4/5" : "w-full"}`}>
         <div className="flex-1">
           <Navbar cartCount={cartCount} />

@@ -33,7 +33,7 @@ const Hero = ({ addToCart }) => {
   ];
 
   return (
-    <section className="py-8 px-8">
+    <section className="container py-8 px-8">
       <div className="container px-4 md:px-0">
         <h1 className="text-center text-3xl md:text-4xl sm:text-2xl font-bold mb-4 text-red-500">
           CHICKEN CRISPER® COMBOS
@@ -100,7 +100,7 @@ const Hero = ({ addToCart }) => {
           </div>
         </div>
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 justify-items-center">
           {products.map((product) => (
             <div
               key={product.id}

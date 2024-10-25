@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -7,7 +6,7 @@ const Navbar = ({ cartCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-red-100 py-2 px-10 flex justify-between items-center shadow sticky top-0 z-10">
+    <nav className="  bg-red-100 py-2 px-10 flex justify-between items-center shadow sticky top-0 z-10">
       <div className="flex items-center space-x-4">
         <img
           src="https://i.ibb.co.com/SrT42vf/download-Photoroom.png"
