@@ -10,7 +10,7 @@ const Hero = ({ addToCart }) => {
       price: 69,
       image: "https://i.ibb.co/cF9LXJj/chicken.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
       new: true, // New product
     },
     {
@@ -19,7 +19,7 @@ const Hero = ({ addToCart }) => {
       price: 169,
       image: "https://i.ibb.co.com/Mh7HmKW/Fajitas.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const Hero = ({ addToCart }) => {
       price: 269,
       image: "https://i.ibb.co.com/ggr7yM7/Chicken-Masala.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
       new: true,
     },
   ];
@@ -101,43 +101,42 @@ const Hero = ({ addToCart }) => {
         </div>
         {/* card */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
-  {products.map((product) => (
-    <div
-      key={product.id}
-      className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center gap-2 relative max-w-md" // Change this line
-    >
-      {product.new && (
-        <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs px-3 py-1 rounded-full transform -rotate-45">
-          NEW
-        </span>
-      )}
+          {products.map((product) => (
+            <div
+              key={product.id}
+              className="bg-white p-5 rounded-lg shadow-md flex flex-col items-center gap-2 relative max-w-md" // Change this line
+            >
+              {product.new && (
+                <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs px-3 py-1 rounded-full transform -rotate-45">
+                  NEW
+                </span>
+              )}
 
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-full h-36 object-cover mb-1 rounded-md"
-      />
-      <div className="text-start">
-        <p className="text-lg font-semibold">{product.name}</p>
-        <p className="text-gray-600 pb-2">{product.price}$/foreach</p>
-        <p className="text-gray-600 text-sm line-clamp-2 overflow-hidden">
-          {product.description}
-        </p>
-      </div>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-36 object-cover mb-1 rounded-md"
+              />
+              <div className="text-start">
+                <p className="text-lg font-semibold">{product.name}</p>
+                <p className="text-gray-600 pb-2">{product.price}$/foreach</p>
+                <p className="text-gray-600 text-sm line-clamp-3 overflow-hidden">
+                  {product.description}
+                </p>
+              </div>
 
-      <button
-        onClick={() => addToCart(product)}
-        className="mt-4 w-full bg-red-500 text-white font-medium hover:text-white hover:bg-gray-500 py-1 rounded"
-      >
-        Add to Order
-      </button>
-      <button className="mt-2 w-full bg-white text-red-500 border-2 border-red-500 py-1 rounded font-medium">
-        Customize
-      </button>
-    </div>
-  ))}
-</div>
-
+              <button
+                onClick={() => addToCart(product)}
+                className="mt-4 w-full bg-red-500 text-white font-medium hover:text-white hover:bg-gray-500 py-1 rounded"
+              >
+                Add to Order
+              </button>
+              <button className="mt-2 w-full bg-white text-red-500 border-2 border-red-500 py-1 rounded font-medium">
+                Customize
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
