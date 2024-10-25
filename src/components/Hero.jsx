@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import  { useState } from "react";
 
 const Hero = ({ addToCart }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,8 @@ const Hero = ({ addToCart }) => {
       price: 69,
       image: "https://i.ibb.co/cF9LXJj/chicken.jpg",
       description:
-        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
-      new: true, // New product
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour",
+      new: true, 
     },
     {
       id: 2,
@@ -19,7 +20,7 @@ const Hero = ({ addToCart }) => {
       price: 169,
       image: "https://i.ibb.co.com/Mh7HmKW/Fajitas.jpg",
       description:
-        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour",
     },
     {
       id: 3,
@@ -27,7 +28,7 @@ const Hero = ({ addToCart }) => {
       price: 269,
       image: "https://i.ibb.co.com/ggr7yM7/Chicken-Masala.jpg",
       description:
-        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
+        "Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour cream Chicken Fajitas served with rice and beans tortilas guacamole salsa andsour",
       new: true,
     },
   ];
