@@ -1,4 +1,4 @@
-// Navbar.js
+
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -23,7 +23,7 @@ const Navbar = ({ cartCount, openSidebar }) => {
       <div className="flex items-center space-x-4">
         <button
           className="relative"
-          onClick={openSidebar} // Open sidebar on click
+          onClick={openSidebar} 
         >
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full text-sm px-1">

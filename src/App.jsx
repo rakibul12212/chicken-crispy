@@ -1,4 +1,4 @@
-// App.js
+
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -23,7 +23,7 @@ const App = () => {
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
-    setSidebarOpen(true); // Open sidebar when an item is added
+    setSidebarOpen(true); 
   };
 
   const updateQuantity = (id, increment) => {
@@ -55,7 +55,7 @@ const App = () => {
         <div className="flex-1">
           <Navbar 
             cartCount={cartCount} 
-            openSidebar={() => setSidebarOpen(true)} // Pass the function to open sidebar
+            openSidebar={() => setSidebarOpen(true)} 
           />
           <Hero addToCart={addToCart} />
         </div>

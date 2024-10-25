@@ -1,4 +1,4 @@
-// Sidebar.js
+
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { ImBin2 } from "react-icons/im";
