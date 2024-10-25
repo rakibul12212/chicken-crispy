@@ -10,7 +10,7 @@ const Hero = ({ addToCart }) => {
       price: 69,
       image: "https://i.ibb.co/cF9LXJj/chicken.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum cum porro molestias praesentium veniam odio.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
       new: true, // New product
     },
     {
@@ -19,7 +19,7 @@ const Hero = ({ addToCart }) => {
       price: 169,
       image: "https://i.ibb.co.com/Mh7HmKW/Fajitas.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum cum porro molestias praesentium veniam odio.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const Hero = ({ addToCart }) => {
       price: 269,
       image: "https://i.ibb.co.com/ggr7yM7/Chicken-Masala.jpg",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum cum porro molestias praesentium veniam odio.",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto. Nesciunt sed aut dolorum.",
       new: true,
     },
   ];
@@ -35,14 +35,14 @@ const Hero = ({ addToCart }) => {
   return (
     <section className="py-8 px-8">
       <div className="container px-4 md:px-0">
-      <h1 className="text-center text-3xl md:text-4xl sm:text-2xl font-bold mb-4">
+        <h1 className="text-center text-3xl md:text-4xl sm:text-2xl font-bold mb-4 text-red-500">
           CHICKEN CRISPER® COMBOS
         </h1>
         <p className="text-center pb-4 text-gray-500 text-xs">
           Menu <span className="text-red-500">&gt;</span> CHICKEN CRISPER®
           COMBOS
         </p>
-        <p className="text-center text-gray-800 font-medium pb-8">
+        <p className="text-center text-gray-600 font-medium pb-8">
           Find everything from our big Month Burgers®, our always sizzling
           Full-on Fajitas, and our famous CHICKEN CRISPER®.
         </p>
@@ -100,14 +100,14 @@ const Hero = ({ addToCart }) => {
           </div>
         </div>
         {/* card */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center relative"
+              className="bg-white  p-5 rounded-lg shadow-md flex flex-col items-center relative"
             >
               {product.new && (
-                <span className="absolute top-2 left-1 bg-red-500 text-white text-xs px-2 py-1 rounded-full transform -rotate-45">
+                <span className="absolute top-[0px] left-[-16px] bg-red-500 text-white text-xs px-3 py-1 rounded-full transform -rotate-45">
                   NEW
                 </span>
               )}
@@ -119,7 +119,7 @@ const Hero = ({ addToCart }) => {
               />
               <div className="text-start">
                 <p className=" text-lg font-bold">{product.name}</p>
-                <p className="text-gray-600 ">{product.price}$/foreach</p>
+                <p className="text-gray-600 pb-4">{product.price}$/foreach</p>
                 <p className="text-gray-600 text-sm ">{product.description}</p>
               </div>
 

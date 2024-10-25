@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
-import { FiMenu, FiX } from "react-icons/fi"; // Hamburger and Close Icons
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = ({ cartCount }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-red-100 py-2 px-10 flex justify-between items-center shadow">
+    <nav className="bg-red-100 py-2 px-10 flex justify-between items-center shadow sticky top-0 z-10">
       <div className="flex items-center space-x-4">
         <img
-          src="https://i.ibb.co.com/k20XXwh/download.png"
+          src="https://i.ibb.co.com/SrT42vf/download-Photoroom.png"
           alt="Logo"
-          className="w-10 h-10 rounded-full"
+          className="w-16 h-16 rounded-full"
         />
 
         <ul
