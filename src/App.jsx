@@ -1,5 +1,4 @@
-
-import  { useState } from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Sidebar from "./components/Sidebar";
@@ -32,7 +31,7 @@ const App = () => {
         item.id === id
           ? { ...item, quantity: Math.max(item.quantity + increment, 0) }
           : item
-      )
+      ).filter(item => item.quantity > 0)
     );
   };
 
@@ -57,7 +56,7 @@ const App = () => {
             cartCount={cartCount} 
             openSidebar={() => setSidebarOpen(true)} 
           />
-          <Hero addToCart={addToCart} />
+          <Hero addToCart={addToCart} cartItems={cartItems} />
         </div>
         <Sidebar
           cartItems={cartItems}

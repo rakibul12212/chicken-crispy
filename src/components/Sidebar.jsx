@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import { ImBin2 } from "react-icons/im";
@@ -34,7 +33,6 @@ const Sidebar = ({
         </button>
       </div>
 
-      {/* Cart Items */}
       <div className="py-4 px-3 overflow-y-auto h-4/5">
         {cartItems.length > 0 ? (
           <ul>
@@ -93,7 +91,6 @@ const Sidebar = ({
         )}
       </div>
 
-      {/* Order summary */}
       <div className="p-5 bg-white ">
         <h3 className="text-lg font-bold text-center space-x-4 text-red-500">
           <span>Place Order</span> <span>${totalPrice.toFixed(2)}</span>
